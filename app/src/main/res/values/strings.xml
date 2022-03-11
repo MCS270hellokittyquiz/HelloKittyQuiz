@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">HelloKittyQuiz</string>
+    <string name="true_button">True</string>
+    <string name="false_button">False</string>
+    <string name="previous_button">Previous</string>
+    <string name="next_button">Next</string>
+    <string name="correct_toast">Correct!</string>
+    <string name="incorrect_toast">Incorrect</string>
+    <string name="question1">Hello Kitty\'s best friend is named My Melody</string>
+    <string name="question2">Hello Kitty has a pet cat called Gross Kitty</string>
+    <string name="question3">Hello Kitty\'s Measurement is in pears</string>
+    <string name="question4">Hello Kitty didn\'t appear on tv until the late \'80s</string>
+    <string name="warning_text">Are you sure you want to do this?</string>
+    <string name="show_answer_button">Show me the answers!</string>
+    <string name="cheat_button">Cheat</string>
+    <string name="judgment_toast">Cheating is wrong.</string>
+    <string name="already_answered">Question already answered</string>
+
+    <string name="title_activity_cheat">CheatActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+</resources>
