@@ -18,6 +18,7 @@ import androidx.lifecycle.ViewModelProviders
 private const val TAG = "MainActivity"
 private const val KEY_INDEX = "index"
 private const val REQUEST_CODE_CHEAT = 0
+private const val REQUEST_CODE_SUMMARY = 1
 
 class MainActivity : AppCompatActivity() {
 
@@ -84,10 +85,12 @@ class MainActivity : AppCompatActivity() {
                 else if (i == true)
                     correctQ += 1
             }
-            val score = "Final score: " + (correctQ.toDouble()/quizViewModel.questionBank.size) * 100 + "% correct"
-            val toast = Toast.makeText(this, score, Toast.LENGTH_LONG)
-            toast.setGravity(Gravity.TOP, 0, 0)
-            toast.show()
+//            val score = "Final score: " + (correctQ.toDouble()/quizViewModel.questionBank.size) * 100 + "% correct"
+//            val toast = Toast.makeText(this, score, Toast.LENGTH_LONG)
+//            toast.setGravity(Gravity.TOP, 0, 0)
+//            toast.show()
+            val intent = Summary.newIntent(this@MainActivity, (correctQ.toDouble()/quizViewModel.questionBank.size) * 100)
+            startActivityForResult(intent, REQUEST_CODE_SUMMARY)
         }
 
         trueButton.setOnClickListener {
@@ -131,7 +134,10 @@ class MainActivity : AppCompatActivity() {
             if (data?.getBooleanExtra(EXTRA_ANSWER_SHOWN, false) ?: false) {
                 quizViewModel.setCheater()
             }
+        } else if (requestCode == REQUEST_CODE_SUMMARY) {
+            //TODO retake quiz
         }
+
     }
 
     override fun onStart() {
