@@ -15,6 +15,10 @@
             android:label="@string/title_activity_cheat"
             android:theme="@style/Theme.HelloKittyQuiz.NoActionBar" />
         <activity
+            android:name=".Summary"
+            android:label="@string/quiz_summary"
+            android:theme="@style/Theme.HelloKittyQuiz.NoActionBar" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

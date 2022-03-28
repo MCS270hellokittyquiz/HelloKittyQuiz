@@ -89,7 +89,7 @@ class MainActivity : AppCompatActivity() {
 //            val toast = Toast.makeText(this, score, Toast.LENGTH_LONG)
 //            toast.setGravity(Gravity.TOP, 0, 0)
 //            toast.show()
-            val intent = Summary.newIntent(this@MainActivity, (correctQ.toDouble()/quizViewModel.questionBank.size) * 100)
+            val intent = Summary.newIntent(this@MainActivity, ((correctQ.toDouble()/quizViewModel.questionBank.size) * 100).toInt())
             startActivityForResult(intent, REQUEST_CODE_SUMMARY)
         }
 
@@ -135,7 +135,8 @@ class MainActivity : AppCompatActivity() {
                 quizViewModel.setCheater()
             }
         } else if (requestCode == REQUEST_CODE_SUMMARY) {
-            //TODO retake quiz
+            quizViewModel.reset()
+            updateQuestions()
         }
 
     }

@@ -46,4 +46,10 @@ class QuizViewModel : ViewModel() {
     fun moveToPrev() {
         currentIndex = (currentIndex - 1).mod(questionBank.size)
     }
+
+    fun reset() {
+        currentIndex = 0
+        isCheater = Array(questionBank.size){false}
+        correct = Array<Boolean?>(questionBank.size){null}
+    }
 }
